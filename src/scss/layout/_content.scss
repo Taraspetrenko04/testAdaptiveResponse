@@ -1,0 +1,135 @@
+// @media all and (min-width: 240px) {}
+// @media (min-width: 640px) and (max-width: 959px) {}
+// @media (min-width: 960px) and (max-width: 1199px) {}
+// @media (min-width: 1200px) {}
+
+
+
+@media all and (min-width: 240px) {
+  .container {
+    display: grid;
+    grid-gap: 10px;
+    max-width: 100%;
+    // margin-left: 50px;
+   
+  }
+
+    .header{
+        top: 0;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        position: fixed;
+        background-color: lightpink;
+
+        &__nav{
+            position: absolute;
+            top: 50px;
+        }
+
+        &__button-help{
+            margin-left: auto;
+            display: inline-block;
+        }
+    }
+
+    .section1{
+        margin-top: 50px;
+        background-color: red;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section2{
+        background-color: blue;
+        padding: 10px 10px;
+        height: 300px;
+
+        &__item{
+            display: flex;
+            background-color: lightgrey;
+            margin-top: 5px;
+        }
+        &__img{
+            width: 50px;
+            height: 40px;
+            background-image: url(./../img/images.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        &__text{
+            text-overflow: ellipsis;
+            height: 40px;
+            overflow-x: hidden;
+            width: fit-conten;
+            overflow: scroll;
+            box-sizing: border-box;
+            width: fit-content;
+            padding-left: 5px;
+        }
+        &__font{
+            display: none;
+        }
+    }
+    .section3{
+        background-color: green;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+
+@media (min-width: 749px) /*and (max-width: 959px)*/ {
+  .container {
+    margin-top: 50px;
+    max-width: 959px;
+    display: grid;
+    grid-template-columns: 250px 1fr 200px;
+  }
+  .header{
+        
+    &__nav{
+        position: static;
+        top: 0;
+    }
+    &__nav-menu{
+        display: inline;
+    }
+
+}
+  .section1{
+    margin-top: 0;
+  }
+
+  .section2{
+
+        &__font{
+            display: block;
+            padding-top: 5px; 
+        }
+    }
+}
+
+@media (min-width: 960px) {
+  .container {  
+    max-width: 959px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .header{
+        
+    &__nav{
+        position: static;
+        top: 0;
+    }
+}
+}
